@@ -1,0 +1,56 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: 'Comic Sans MS', sans-serif;
+}
+
+.parallax-container {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.parallax.layer {
+  position: absolute;
+  width: 100%;
+  height: 120%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  transform: translateZ(0);
+}
+
+.layer-back {
+  background-image: url('https://i.imgur.com/5rJW8rp.jpg'); /* deep sea */
+  z-index: 1;
+}
+
+.layer-mid {
+  background-image: url('https://i.imgur.com/tblg1gR.png'); /* fish or mid-wave */
+  z-index: 2;
+}
+
+.layer-front {
+  background-image: url('https://i.imgur.com/ZmFjVZ4.png'); /* close bubbles/waves */
+  z-index: 3;
+}
+
+.content {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  color: white;
+  padding-top: 25vh;
+}
+
+h1 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+p {
+  font-size: 1.5rem;
+}
