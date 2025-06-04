@@ -159,3 +159,94 @@
   });
 </script>
 <link rel="stylesheet" href="css/style.css" />
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dolphin Junior Academy</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      font-family: 'Comic Sans MS', sans-serif;
+    }
+
+    .parallax-container {
+      position: relative;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .parallax.layer {
+      position: absolute;
+      width: 100%;
+      height: 120%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      top: 0;
+      left: 0;
+      z-index: 0;
+      transform: translateZ(0);
+    }
+
+    .layer-back {
+      background-image: url('https://i.imgur.com/5rJW8rp.jpg'); /* deep sea */
+      z-index: 1;
+    }
+
+    .layer-mid {
+      background-image: url('https://i.imgur.com/tblg1gR.png'); /* fish or mid-wave */
+      z-index: 2;
+    }
+
+    .layer-front {
+      background-image: url('https://i.imgur.com/ZmFjVZ4.png'); /* bubbles/waves */
+      z-index: 3;
+    }
+
+    .content {
+      position: relative;
+      z-index: 10;
+      text-align: center;
+      color: white;
+      padding-top: 25vh;
+      text-shadow: 2px 2px 4px #000;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin: 0;
+    }
+
+    p {
+      font-size: 1.5rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="parallax-container">
+    <div class="parallax layer layer-back"></div>
+    <div class="parallax layer layer-mid"></div>
+    <div class="parallax layer layer-front"></div>
+    <div class="content">
+      <h1>Welcome to Dolphin Junior Academy</h1>
+      <p>catch them young!</p>
+    </div>
+  </div>
+
+  <script>
+    window.addEventListener('scroll', function() {
+      const back = document.querySelector('.layer-back');
+      const mid = document.querySelector('.layer-mid');
+      const front = document.querySelector('.layer-front');
+      const scrollY = window.scrollY;
+
+      back.style.transform = `translateY(${scrollY * 0.2}px)`;
+      mid.style.transform = `translateY(${scrollY * 0.5}px)`;
+      front.style.transform = `translateY(${scrollY * 0.8}px)`;
+    });
+  </script>
+</body>
+</html>
